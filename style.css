@@ -1,0 +1,63 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111827; /* Dark Gray Background */
+    color: white;
+}
+
+/* ORIGINAL SULUHU GRADIENT */
+.suluhu-gradient {
+    background: linear-gradient(135deg, #FFD700, #FF007F, #00BFFF);
+    background-size: 200% 200%;
+    animation: gradientMove 5s ease infinite;
+}
+
+/* ANIMATED BACKGROUND FOR SULUHU CARD */
+.suluhu-card-bg {
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+}
+
+/* MTEULE STYLE */
+.mteule-card-bg {
+    background: white;
+    color: #111827;
+    border-left: 8px solid #059669; /* Emerald Green */
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.book-card {
+    transition: transform 0.2s ease;
+}
+.book-card:active {
+    transform: scale(0.98);
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: white;
+}
+
+/* MODAL ANIMATION */
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+.modal.active .modal-content {
+    transform: translateY(0);
+}
